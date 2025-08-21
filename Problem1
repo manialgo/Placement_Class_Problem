@@ -1,0 +1,47 @@
+/*
+6.Problem Statement:
+Given 2 numbers, print the first number as a 5-digit number and print the second number in the next line with 5 width space
+Explanation: If numbers are 25 and 98,print the first number as 00025 and second number as 3 space and 98(   98).
+Input Format:
+Accept the two integer as a input
+Output Format:
+5 digit number format followed by number with 5 width space in new line.
+*/
+package solveproblem;
+import java.util.Scanner;
+public class prob6 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num1 = sc.nextInt();
+		int original1 =num1;
+		int num2 = sc.nextInt();
+		int original2 =num2;
+		int digit1 =0, digit2=0;
+		int return1, return2;
+		String totalDigit1 = "0", totalDigit2 = " ";
+		String str1, str2;
+		while(num1>0) {
+			digit1++;
+			num1/=10;
+		}
+		while(num2>0) {
+			digit2++;
+			num2/=10;
+		}
+		if(digit1 == 5) {
+		System.out.println(original1);
+		} else {
+			return1 = 5-digit1;
+			str1 = totalDigit1.repeat(return1);
+			System.out.println(str1+original1);
+		}
+		if(digit2 == 5) {
+			System.out.println(original2);
+		} else {
+			return2 = 5-digit2;
+			str2 = totalDigit2.repeat(return2);
+			System.out.println(str2+original2);
+		}
+		sc.close();
+	}
+}

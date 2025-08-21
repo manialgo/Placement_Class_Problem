@@ -1,5 +1,5 @@
 /*
-6.Problem Statement:
+Problem Statement:
 Given 2 numbers, print the first number as a 5-digit number and print the second number in the next line with 5 width space
 Explanation: If numbers are 25 and 98,print the first number as 00025 and second number as 3 space and 98(   98).
 Input Format:

@@ -1,0 +1,51 @@
+// count of digit and print forward and backward of given number
+//package Sat23082025;
+import java.util.Scanner;
+public class classproblem7 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int same = n;
+		String same2 = Integer.toString(same);
+		int count =0;
+		int q;
+		System.out.println("\nReverse Print: ");
+		while(n>0) {
+			n/=10;
+			q = same % 10;
+			same /=10;
+			System.out.println(q);
+			count++;
+		}
+		System.out.println();
+		System.out.println("Forward Print: ");
+		for(int i=0; i <count; i++) {
+			System.out.println(same2.charAt(i));
+		}
+		System.out.println();
+		System.out.println("Total digits: " + count);
+		sc.close();
+	}
+}
+
+// Output sample
+
+123456
+
+Reverse Print: 
+6
+5
+4
+3
+2
+1
+
+Forward Print: 
+1
+2
+3
+4
+5
+6
+
+Total digits: 6
